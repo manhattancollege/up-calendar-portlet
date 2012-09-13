@@ -1,0 +1,12 @@
+
+<predefined-calendar-definition script="classpath:/org/jasig/portlet/calendar/io/import-PredefinedCalendarDefinition_v1-0.crn.xml">
+  <name>School of Business</name>
+  <className>httpIcalAdapter</className>
+  <parameters> 
+    <parameter name="url">http://www.google.com/calendar/ical/manhattan.edu_9biabtlgo4m6d870iqpt1up3u8%40group.calendar.google.com/public/basic.ics</parameter> 
+  </parameters>
+  <fname>mc-business</fname>
+  <defaultRoles> 
+    <role>Everyone</role> 
+  </defaultRoles>
+</predefined-calendar-definition>

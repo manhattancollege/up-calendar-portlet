@@ -1,0 +1,12 @@
+
+<predefined-calendar-definition script="classpath:/org/jasig/portlet/calendar/io/import-PredefinedCalendarDefinition_v1-0.crn.xml">
+  <name>Center for Career Development</name>
+  <className>httpIcalAdapter</className>
+  <parameters> 
+    <parameter name="url">http://www.google.com/calendar/ical/manhattan.edu_7pd7refk6lnti3hovi4qufo06k%40group.calendar.google.com/public/basic.ics</parameter> 
+  </parameters>
+  <fname>mc-career_dev</fname>
+  <defaultRoles> 
+    <role>Everyone</role> 
+  </defaultRoles>
+</predefined-calendar-definition>

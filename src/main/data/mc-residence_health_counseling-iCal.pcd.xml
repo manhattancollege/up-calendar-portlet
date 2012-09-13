@@ -1,0 +1,12 @@
+
+<predefined-calendar-definition script="classpath:/org/jasig/portlet/calendar/io/import-PredefinedCalendarDefinition_v1-0.crn.xml">
+  <name>Residence Life/Health Services/Counseling</name>
+  <className>httpIcalAdapter</className>
+  <parameters> 
+    <parameter name="url">http://www.google.com/calendar/ical/manhattan.edu_190v903b2vv8rl6lqa24ud5ed8%40group.calendar.google.com/public/basic.ics</parameter> 
+  </parameters>
+  <fname>mc-residence_health_counseling</fname>
+  <defaultRoles> 
+    <role>Everyone</role> 
+  </defaultRoles>
+</predefined-calendar-definition>

@@ -1,0 +1,12 @@
+
+<predefined-calendar-definition script="classpath:/org/jasig/portlet/calendar/io/import-PredefinedCalendarDefinition_v1-0.crn.xml">
+  <name>Student Financial Services</name>
+  <className>httpIcalAdapter</className>
+  <parameters> 
+    <parameter name="url">http://www.google.com/calendar/ical/manhattan.edu_t7klnpj5ndg2p518bsiuebvg8c%40group.calendar.google.com/public/basic.ics</parameter> 
+  </parameters>
+  <fname>mc-financial_services</fname>
+  <defaultRoles> 
+    <role>Everyone</role> 
+  </defaultRoles>
+</predefined-calendar-definition>
