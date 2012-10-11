@@ -1,0 +1,14 @@
+
+<predefined-calendar-definition script="classpath:/org/jasig/portlet/calendar/io/import-PredefinedCalendarDefinition_v1-0.crn.xml">
+  <name>Google</name>
+  <className>calDavAdapter</className>
+  <parameters> 
+    <parameter name="url">https://www.google.com/calendar/dav/@USERNAME@%40manhattan.edu/events</parameter> 
+  </parameters>
+  <fname>mc-google</fname>
+  <defaultRoles> 
+    <role>Students</role> 
+    <role>Faculty</role> 
+    <role>Staff</role> 
+  </defaultRoles>
+</predefined-calendar-definition>

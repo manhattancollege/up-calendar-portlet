@@ -117,10 +117,10 @@
         <name>casProxyTicket</name>
     </user-attribute-->
 
-    <!-- Uncomment to use cached password authentication -->
-    <!--user-attribute>
+    <!-- Uncomment to use cached password authentication or authenticated calDAV -->
+    <user-attribute>
         <name>password</name>
-    </user-attribute-->
+    </user-attribute>
 
     <!-- Uncomment to use Exchange -->
     <!--user-attribute>
