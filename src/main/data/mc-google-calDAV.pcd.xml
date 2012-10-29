@@ -3,12 +3,12 @@
   <name>Google</name>
   <className>calDavAdapter</className>
   <parameters> 
-    <parameter name="url">https://www.google.com/calendar/dav/@USERNAME@%40manhattan.edu/events</parameter> 
+    <parameter name="url">https://www.google.com/calendar/dav/@USERNAME@/events/</parameter> 
   </parameters>
   <fname>mc-google</fname>
-  <defaultRoles> 
+  <predefinedRoles> 
     <role>Students</role> 
     <role>Faculty</role> 
     <role>Staff</role> 
-  </defaultRoles>
+  </predefinedRoles>
 </predefined-calendar-definition>

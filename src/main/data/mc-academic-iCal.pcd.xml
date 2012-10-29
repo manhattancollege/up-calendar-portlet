@@ -6,7 +6,7 @@
     <parameter name="url">http://www.google.com/calendar/ical/manhattan.edu_so0h01psv8dkfvp3omvmusjj1s%40group.calendar.google.com/public/basic.ics</parameter> 
   </parameters>
   <fname>mc-academic</fname>
-  <defaultRoles> 
+  <predefinedRoles> 
     <role>Everyone</role> 
-  </defaultRoles>
+  </predefinedRoles>
 </predefined-calendar-definition>

@@ -122,9 +122,9 @@
         <name>password</name>
     </user-attribute>
 
-    <!-- Uncomment to use Exchange -->
-    <!--user-attribute>
+    <!-- Uncomment to use Exchange or calDAV -->
+    <user-attribute>
         <name>mail</name>
-    </user-attribute-->
+    </user-attribute>
                 
 </portlet-app>

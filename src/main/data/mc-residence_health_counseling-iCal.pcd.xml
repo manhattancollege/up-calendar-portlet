@@ -6,7 +6,7 @@
     <parameter name="url">http://www.google.com/calendar/ical/manhattan.edu_190v903b2vv8rl6lqa24ud5ed8%40group.calendar.google.com/public/basic.ics</parameter> 
   </parameters>
   <fname>mc-residence_health_counseling</fname>
-  <defaultRoles> 
+  <predefinedRoles> 
     <role>Everyone</role> 
-  </defaultRoles>
+  </predefinedRoles>
 </predefined-calendar-definition>
