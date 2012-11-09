@@ -3,7 +3,7 @@
   <name>Academic Affairs</name>
   <className>httpIcalAdapter</className>
   <parameters> 
-    <parameter name="url">http://www.google.com/calendar/ical/manhattan.edu_kk66viqnor5jvvtdep2e7qiiao%40group.calendar.google.com/public/basic.ics</parameter> 
+    <parameter name="url">http://www.google.com/calendar/ical/manhattan.edu_akmtjejesafnif0vi00vo234hg%40group.calendar.google.com/public/basic.ics</parameter> 
   </parameters>
   <fname>mc-academic_affairs</fname>
   <predefinedRoles> 
