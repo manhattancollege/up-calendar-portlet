@@ -110,6 +110,11 @@
                 <version>1.3</version>
             </dependency>
             <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.6</version>
+            </dependency>
+            <dependency>
                 <groupId>commons-collections</groupId>
                 <artifactId>commons-collections</artifactId>
                 <version>3.2</version>
@@ -232,7 +237,7 @@
             <dependency>
                 <groupId>org.jasig.portlet.courses</groupId>
                 <artifactId>courses-portlet-dao</artifactId>
-                <version>1.0.0-M3</version>
+                <version>1.0.0-M4-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>org.jasig.portlet.utils</groupId>
@@ -590,6 +595,11 @@
 
 
         <!-- ===== Runtime Dependencies ================================== -->
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <scope>runtime</scope>
+        </dependency>
         <dependency>
             <groupId>net.sourceforge.nekohtml</groupId>
             <artifactId>nekohtml</artifactId>

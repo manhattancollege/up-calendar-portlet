@@ -1,0 +1,8 @@
+<predefined-calendar-definition script="classpath:/org/jasig/portlet/calendar/io/import-PredefinedCalendarDefinition_v1-0.crn.xml">
+    <name>Student Courses</name>
+    <className>coursesCalendarAdapter</className>
+    <fname>mc-courses</fname>
+    <predefinedRoles>
+        <role>Students</role>
+    </predefinedRoles>
+</predefined-calendar-definition>
