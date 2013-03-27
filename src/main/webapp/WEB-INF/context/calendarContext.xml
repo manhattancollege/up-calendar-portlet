@@ -203,18 +203,64 @@
      | should be identical to the courses portlet so both portlets access the same
      | data source.
      +-->
-    <!--
     <bean id="coursesCalendarAdapter"
         class="org.jasig.portlet.calendar.adapter.CoursesCalendarAdapter"
         p:cache-ref="calendarCache"
-        p:courseDao-ref="xmlCourseDao"
+        p:courseDao-ref="httpCourseDao"
         p:titleKey="courses.dao.calendar.feed"
         p:descriptionKey="courses.dao.calendar.description">
         <property name="cacheKeyGenerator">
             <bean class="org.jasig.portlet.calendar.caching.RequestAttributeCacheKeyGeneratorImpl" p:includePeriod="false"/>
         </property>
     </bean>
-    -->
+
+    <bean id="termCodeParameterEvaluator" class="org.jasig.portlet.courses.util.TermCodeParameterEvaluator"/>
+    <bean id="userLoginIdParameterEvaluator" class="org.jasig.portlet.courses.util.UserAttributeParameterEvaluator" p:userAttributeKey="user.login.id"/>
+    <bean id="passwordParameterEvaluator" class="org.jasig.portlet.courses.util.UserAttributeParameterEvaluator" p:userAttributeKey="password"/>
+
+    <bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+        <property name="requestFactory">
+            <bean class="org.springframework.http.client.CommonsClientHttpRequestFactory">
+                <property name="httpClient" ref="httpClient" />
+            </bean>
+        </property>
+        <property name="messageConverters">
+            <util:list>
+                <bean class="org.springframework.http.converter.xml.Jaxb2RootElementHttpMessageConverter"/>
+                <bean class="org.springframework.http.converter.StringHttpMessageConverter"/>
+            </util:list>
+        </property>
+    </bean>
+
+    <bean id="httpCourseDao" class="org.jasig.portlet.courses.dao.xml.HttpClientCoursesDaoImpl" p:restTemplate-ref="restTemplate">
+        <property name="termsUrlFormat" value="https://api01.manhattan.edu/api/v1/uPortal/CoursesPortletTermFeed.xml"/>
+        <property name="coursesUrlFormat" value="https://api01.manhattan.edu/api/v1/uPortal/CoursesPortletFullFeed.xml/{username}/{term.code}"/>
+        <property name="urlParams">
+            <util:map key-type="java.lang.String" value-type="org.jasig.portlet.courses.util.IParameterEvaluator">
+                <entry key="username" value-ref="userLoginIdParameterEvaluator"/>
+                <entry key="term.code" value-ref="termCodeParameterEvaluator"/>
+            </util:map>
+        </property>
+        <property name="usernameEvaluator">
+            <bean class="org.jasig.portlet.courses.util.StringLiteralParameterEvaluator" p:value="up_test"/>
+        </property>
+        <property name="passwordEvaluator">
+            <bean class="org.jasig.portlet.courses.util.StringLiteralParameterEvaluator" p:value="ZJyJPVjPFFu2ARCCrFqcFDnqqCPmhAJUaGEjJXn2Au"/>
+        </property>
+    </bean>
+
+    <bean id="httpConnectionManager" class="org.apache.commons.httpclient.MultiThreadedHttpConnectionManager" destroy-method="shutdown">
+        <property name="params">
+            <bean class="org.apache.commons.httpclient.params.HttpConnectionManagerParams">
+                <property name="defaultMaxConnectionsPerHost" value="200" />
+                <property name="maxTotalConnections" value="1000"/>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="httpClient" class="org.apache.commons.httpclient.HttpClient">
+        <constructor-arg ref="httpConnectionManager" />
+    </bean>
 
     <!--
      | Mock data for the course calendar adapter.  The java class is from
