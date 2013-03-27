@@ -3,10 +3,12 @@
   <name>Student Activities</name>
   <className>httpIcalAdapter</className>
   <parameters> 
-    <parameter name="url">http://www.google.com/calendar/ical/manhattan.edu_ulg2fkmnc3pt0d2u5no51ppa3g%40group.calendar.google.com/public/basic.ics</parameter> 
+<!--    <parameter name="url">http://www.google.com/calendar/ical/manhattan.edu_ulg2fkmnc3pt0d2u5no51ppa3g%40group.calendar.google.com/public/basic.ics</parameter> -->
+<!--   <parameter name="url">http://events.manhattan.edu/calendar.ics?event_types%5B%5D=18977</parameter> -->
+  <parameter name="url">http://www.google.com/calendar/ical/s7gcrid58gnb1bgb2b3lh2cmfm6ctl9h%40import.calendar.google.com/public/basic.ics</parameter> 
   </parameters>
   <fname>mc-student_activities</fname>
   <predefinedRoles> 
-    <role>Everyone</role> 
+    <role>Students</role> 
   </predefinedRoles>
 </predefined-calendar-definition>
