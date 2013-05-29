@@ -112,8 +112,9 @@
                     </div>
             
                     <p class="upcal-loading-message"><spring:message code="loading"/></p>
-                    <div class="upcal-event-list">
-                    </div>
+                    <div class="upcal-event-errors portlet-msg-error" style="display:none"></div>
+
+                    <div class="upcal-event-list"></div>
                 </div>
                 
                 <div class="upcal-event-details" style="display:none">
@@ -245,7 +246,7 @@
             container: "#${n}container",
             listView: new ListView(),
             detailView: new DetailView(),
-            eventsUrl: '<portlet:resourceURL id="START-DAYS"/>', 
+            eventsUrl: '<portlet:resourceURL id="START-DAYS-REFRESH"/>', 
             startDate: '<fmt:formatDate value="${model.startDate}" type="date" pattern="MM/dd/yyyy" timeZone="${ model.timezone }"/>', 
             days: "${ model.days }"
         });

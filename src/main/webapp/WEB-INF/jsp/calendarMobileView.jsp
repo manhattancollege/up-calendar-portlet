@@ -23,6 +23,8 @@
 
 <c:set var="n"><portlet:namespace/></c:set>
 
+<jsp:directive.include file="/WEB-INF/jsp/css.jsp"/>
+
 <c:set var="mobile" value="${ true }"/>
 <jsp:directive.include file="/WEB-INF/jsp/scripts.jsp"/>
 
@@ -38,7 +40,8 @@
                 <div class="upcal-loading-message portlet-msg-info portlet-msg info">
                     <p><spring:message code="loading"/></p>
                 </div>
-                
+
+                <div class="upcal-event-errors portlet-msg-error" style="display:none"></div>
                 <div class="upcal-event-list" style="display:none">
                 </div>
                 
@@ -177,7 +180,7 @@
             container: "#${n}container",
             listView: new ListView(),
             detailView: new DetailView(),
-            eventsUrl: '<portlet:resourceURL id="START-DAYS"/>', 
+            eventsUrl: '<portlet:resourceURL id="START-DAYS-REFRESH"/>', 
             startDate: '<fmt:formatDate value="${model.startDate}" type="date" pattern="MM/dd/yyyy" timeZone="${ model.timezone }"/>', 
             days: "${ model.days }"
         });
